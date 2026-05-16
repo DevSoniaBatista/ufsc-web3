@@ -185,13 +185,6 @@ export default function Home() {
       content: (
         <FadeUp>
           <div className="flex flex-col items-center text-center space-y-6 md:space-y-10 max-w-5xl mx-auto py-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-blue-500 rounded-full blur-[40px] opacity-20 animate-pulse" />
-              <div className="relative bg-gray-900/50 backdrop-blur-xl p-6 md:p-8 rounded-full border border-blue-500/20 shadow-2xl">
-                <Zap className="w-12 h-12 md:w-16 md:h-16 text-blue-400" />
-              </div>
-            </div>
-
             <div className="w-full">
               <div className="bg-white/95 rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
                 <img
@@ -200,6 +193,23 @@ export default function Home() {
                   className="w-full h-auto"
                 />
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-3xl">
+              {[
+                { title: 'Palestra', url: 'https://ufsc-web3.vercel.app/' },
+                { title: 'Mulheres na Web3', url: 'https://www.mulheresnaweb3.com/' },
+              ].map((item) => (
+                <div
+                  key={item.url}
+                  className="bg-black/30 border border-white/10 rounded-2xl p-4 flex flex-col items-center gap-3"
+                >
+                  <p className="text-sm font-black text-white">{item.title}</p>
+                  <div className="bg-white p-3 rounded-2xl shadow-2xl">
+                    <QRCodeSVG value={item.url} size={140} />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </FadeUp>
