@@ -595,6 +595,70 @@ export default function Home() {
       ),
     },
     {
+      section: 'MAINNET/TESTNET',
+      title: 'Mainnet/Testnet',
+      subtitle: 'Rede principal (valor real) vs rede de teste (QA)',
+      content: (
+        <FadeUp>
+          <div className="max-w-6xl mx-auto py-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+            <div className="bg-gray-800/20 backdrop-blur-md p-8 rounded-[2.5rem] border border-white/5 shadow-xl space-y-4">
+              <p className="text-sm text-gray-300 leading-relaxed font-medium">
+                Faucet é um serviço que distribui moedas de <span className="text-white font-black">testnet</span>{' '}
+                (ex.: Sepolia) para você pagar <span className="text-white font-black">taxas (gas)</span> e testar
+                transações, contratos e dApps sem usar dinheiro real.
+              </p>
+              <div className="bg-black/30 border border-white/10 rounded-2xl p-5">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-black mb-2">
+                  Erro comum
+                </p>
+                <p className="text-sm text-gray-300 font-medium leading-relaxed">
+                  O erro comum é confundir:
+                </p>
+                <ul className="text-sm text-gray-300 space-y-2 font-medium mt-3">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2" />
+                    <span>
+                      <span className="text-white font-black">ETH mainnet</span> → tem valor real
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2" />
+                    <span>
+                      <span className="text-white font-black">Sepolia ETH</span> → apenas token de teste para smart
+                      contracts, gas e QA.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-black/30 border border-white/10 rounded-2xl p-5">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-black mb-2">
+                  Para que serve
+                </p>
+                <ul className="text-sm text-gray-300 space-y-2 font-medium">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400" /> Obter ETH de teste
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400" /> Pagar gas em testnet
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400" /> Validar integrações e fluxo da wallet
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-black/30 border border-white/10 rounded-[2.5rem] p-8 shadow-xl flex flex-col items-center gap-4">
+              <p className="text-sm font-black text-white">Exemplo de Faucet (Sepolia)</p>
+              <div className="bg-white p-4 rounded-3xl shadow-2xl">
+                <QRCodeSVG value="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" size={220} />
+              </div>
+            </div>
+          </div>
+        </FadeUp>
+      ),
+    },
+    {
       section: 'CARREIRA',
       title: 'Oportunidades na Web3',
       content: (
